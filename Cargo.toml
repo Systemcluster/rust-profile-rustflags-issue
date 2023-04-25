@@ -1,0 +1,13 @@
+cargo-features = ["profile-rustflags"]
+
+[package]
+name = "profile-rustflags-test"
+version = "0.1.0"
+edition = "2021"
+publish = false
+
+[profile.release]
+rustflags = ["-Ctarget-feature=+crt-static"]
+
+[dependencies]
+sys-info = "0.9"
